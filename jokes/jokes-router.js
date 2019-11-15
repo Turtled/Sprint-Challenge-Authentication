@@ -1,8 +1,8 @@
 const axios = require('axios');
-
+const validation = require("../auth/auth-router");
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
+router.get('/', validation, (req, res) => {
   const requestOptions = {
     headers: { accept: 'application/json' },
   };
